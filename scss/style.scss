@@ -1,0 +1,17 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import 'navbar';
+@import 'footer';
+
+
+
+.nav-link {
+    display: flex;
+}
+
+.demo-button {
+    text-align: center;
+    border-radius: 5px;
+}
