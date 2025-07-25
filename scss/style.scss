@@ -6,8 +6,20 @@
 @import 'footer';
 @import 'hero';
 @import 'features-tab';
+@import 'variable';
 
+// ✅ Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+// ✅ Global body background
+body {
+    background-color: #ffffff;
+    color: #000;
+}
 
 .nav-link {
     display: flex;

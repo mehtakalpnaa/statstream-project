@@ -1,0 +1,43 @@
+.variable-section {
+    padding: 4rem 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .photo {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 32px;
+
+        // ✅ Fix image color/opacity issue
+        filter: none !important;
+        opacity: 1 !important;
+    }
+
+    .text-content {
+        max-width: 500px;
+    }
+
+    .point-photo {
+        width: 50px;
+        height: 50px;
+
+        // ✅ Fix icon color/opacity issue
+        filter: none !important;
+        opacity: 1 !important;
+    }
+
+    // ✅ Just in case any global img filter is applied
+    img {
+        filter: none !important;
+        opacity: 1 !important;
+    }
+}
