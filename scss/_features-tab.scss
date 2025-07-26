@@ -1,110 +1,61 @@
 .feature-tabs-section {
-    padding: 3rem 0;
-    text-align: center;
-    background-color: #f8f9fa;
+    position: relative;
     background-image:
-        linear-gradient(to right, rgba(0, 0, 0, 0.01) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 1px, transparent 1px);
-    background-size: 40px 40px;
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    z-index: 1;
+    padding: 4rem 0;
 
     .section-title {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
+        font-size: 2rem;
+        color: #1a1a1a;
     }
 
     .section-subtitle {
+        color: #555;
         font-size: 1rem;
-        color: #6c757d;
-        margin-bottom: 2rem;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+        line-height: 1.6;
     }
-
 
     .feature-tabs {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 0.75rem;
         margin-bottom: 2rem;
 
         .tab-btn {
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            background-color: #f0f0f0;
-            color: #333;
+            padding: 0.6rem 1.2rem;
+            border: 1px solid rgba(67, 65, 65, 0.178);
+            border-radius: 999px;
+            background-color: transparent;
+            color: black;
             font-weight: 500;
-            transition: all 0.3s ease;
 
-            &.active {
+            cursor: pointer;
+
+            &.active,
+            &:hover {
                 background-color: #0d6efd;
                 color: #fff;
             }
         }
     }
 
-
-    .feature-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        text-align: left;
-
-        @media (min-width: 992px) {
-            flex-direction: row;
-            justify-content: space-between;
-            text-align: left;
+    @media (max-width: 576px) {
+        .section-title {
+            font-size: 1.5rem;
         }
 
-        .feature-text {
-            flex: 1;
-
-            h4 {
-                font-size: 1.5rem;
-                font-weight: 600;
-                margin-bottom: 1rem;
-            }
-
-            p {
-                font-size: 1rem;
-                line-height: 1.6;
-                margin-bottom: 1rem;
-            }
-
-            .demo-btn {
-                background-color: #0d6efd;
-                color: #fff;
-                border: none;
-                border-radius: 50px;
-                padding: 0.5rem 1.5rem;
-
-                text-decoration: none;
-
-                transition: background-color 0.3s ease;
-
-
-            }
+        .section-subtitle {
+            font-size: 0.95rem;
         }
 
-        .feature-image {
-            flex: 1;
-            text-align: center;
-
-            img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 1rem;
-            }
+        .feature-tabs .tab-btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
         }
     }
 }

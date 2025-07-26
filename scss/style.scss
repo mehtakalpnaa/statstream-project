@@ -2,20 +2,18 @@
 @import '../node_modules/bootstrap/scss/variables';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+@import 'variable';
 @import 'navbar';
 @import 'footer';
 @import 'hero';
 @import 'features-tab';
-@import 'variable';
+@import 'features-2';
+@import 'testimonials';
 
-// ✅ Reset
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-// ✅ Global body background
+
+
+
 body {
     background-color: #ffffff;
     color: #000;
