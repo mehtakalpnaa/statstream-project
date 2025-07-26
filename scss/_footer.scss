@@ -2,45 +2,40 @@ footer {
     padding: 4rem 0;
     background-color: white;
 
-    h4 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        text-align: center;
-
-        @media (min-width: 768px) {
-            text-align: left;
-        }
-    }
-
-    .relative {
+    .cta-box {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #3B82F6;
+        justify-content: space-between;
+        gap: 1rem;
+        background: linear-gradient(90deg, #60a5fa, #3b82f6); // Gradient blue
         color: white;
-        border-radius: 1.25rem;
-        padding: 2rem;
-        margin-bottom: 2rem;
+        border-radius: 1.5rem;
+        padding: 2rem 2rem;
         text-align: center;
 
-        a.btn {
-            margin-top: 1rem;
-            padding: 0.75rem 2rem;
-            background-color: white;
-            color: #3B82F6;
+        h4 {
+            font-size: 1.5rem;
             font-weight: 600;
-            border-radius: 2rem;
+            margin: 0;
+        }
+
+        a.btn {
+            background: white;
+            color: #3b82f6;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 9999px; // Fully rounded pill
             text-decoration: none;
 
             &:hover {
-                background-color: #e2e8f0;
+                background: #e2e8f0;
             }
         }
 
         @media (min-width: 768px) {
             flex-direction: row;
-            justify-content: space-between;
             text-align: left;
 
             h4 {
@@ -50,72 +45,6 @@ footer {
             a.btn {
                 margin-top: 0;
             }
-        }
-    }
-
-    h6 {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        color: #1e293b;
-    }
-
-    .text-muted {
-        color: #6b7280 !important;
-    }
-
-    ul {
-        padding-left: 0;
-
-        li {
-            margin-bottom: 0.5rem;
-
-            a {
-                color: #1e293b;
-                text-decoration: none;
-                font-weight: 500;
-
-                &:hover {
-                    color: #3B82F6;
-                }
-            }
-        }
-    }
-
-    .store-badges img {
-        max-width: 120px;
-        height: auto;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
-
-    .border-top {
-        border-top: 1px solid #d1d5db;
-        padding-top: 1rem;
-        margin-top: 2rem;
-        font-size: 0.875rem;
-        color: #6b7280;
-    }
-
-    @media (max-width: 767.98px) {
-        .store-badges {
-            justify-content: center;
-            align-items: center;
-        }
-
-        .d-flex {
-            flex-direction: column !important;
-            align-items: flex-start !important;
-        }
-
-        .text-start {
-            text-align: center !important;
-        }
-
-        .row>div {
-            text-align: center;
         }
     }
 }
