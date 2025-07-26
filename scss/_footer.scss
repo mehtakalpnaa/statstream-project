@@ -1,50 +1,45 @@
-footer {
-    padding: 4rem 0;
-    background-color: white;
+.cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #60a5fa, #3b82f6); // Blue gradient
+    color: white;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
 
-    .cta-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        background: linear-gradient(90deg, #60a5fa, #3b82f6); // Gradient blue
-        color: white;
-        border-radius: 1.5rem;
-        padding: 2rem 2rem;
-        text-align: center;
-
-        h4 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        a.btn {
-            background: white;
-            color: #3b82f6;
-            padding: 0.5rem 1.5rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            border-radius: 9999px; // Fully rounded pill
-            text-decoration: none;
-
-            &:hover {
-                background: #e2e8f0;
-            }
-        }
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
 
         @media (min-width: 768px) {
-            flex-direction: row;
-            text-align: left;
+            font-size: 1.5rem;
+        }
+    }
 
-            h4 {
-                margin-bottom: 0;
-            }
+    .btn-demo {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 0.5rem 1.25rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.3s ease;
 
-            a.btn {
-                margin-top: 0;
-            }
+        &:hover {
+            background-color: #f1f5f9;
+        }
+    }
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+
+        .btn-demo {
+            align-self: center;
         }
     }
 }

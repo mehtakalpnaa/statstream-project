@@ -7,6 +7,7 @@
     background-repeat: repeat;
     z-index: 1;
     padding: 4rem 0;
+    color: #1a1a1a;
 
     .section-title {
         font-size: 2rem;
@@ -26,21 +27,60 @@
         gap: 0.75rem;
         margin-bottom: 2rem;
 
-        .tab-btn {
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
             padding: 0.6rem 1.2rem;
             border: 1px solid rgba(67, 65, 65, 0.178);
             border-radius: 999px;
             background-color: transparent;
             color: black;
             font-weight: 500;
-
             cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
 
-            &.active,
             &:hover {
                 background-color: #0d6efd;
                 color: #fff;
             }
+        }
+
+
+        #tab1:checked~label[for="tab1"],
+        #tab2:checked~label[for="tab2"],
+        #tab3:checked~label[for="tab3"],
+        #tab4:checked~label[for="tab4"],
+        #tab5:checked~label[for="tab5"] {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+    }
+
+    // TAB CONTENT
+    .tab-content {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+
+        >div {
+            display: none;
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            color: #1a1a1a;
+        }
+
+
+        #tab1:checked~.tab-content #content1,
+        #tab2:checked~.tab-content #content2,
+        #tab3:checked~.tab-content #content3,
+        #tab4:checked~.tab-content #content4,
+        #tab5:checked~.tab-content #content5 {
+            display: block;
         }
     }
 
@@ -53,9 +93,20 @@
             font-size: 0.95rem;
         }
 
-        .feature-tabs .tab-btn {
-            padding: 0.5rem 1rem;
-            font-size: 0.875rem;
+        .feature-tabs {
+            flex-direction: column;
+            align-items: center;
+
+            label {
+                width: 100%;
+                text-align: center;
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        .tab-content {
+            padding: 0.5rem;
         }
     }
 }
